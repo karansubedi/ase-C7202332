@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Component2</name>
+    </assembly>
+    <members>
+        <member name="T:Component2.commandCheck">
+            <summary>
+            Class created for checking commands for errors and exception handling
+            </summary>
+        </member>
+        <member name="M:Component2.commandCheck.Commands_Check(Component2.Drawing,System.Int32,System.Int32)">
+            <summary>
+            method to display error when entered command doesn't exist
+            </summary>
+            <param name="newDrawing"></param>
+            <param name="n"></param>
+            <param name="x"></param>
+        </member>
+        <member name="M:Component2.commandCheck.Parameterscheck(System.Boolean,System.String,System.Int32,Component2.Drawing,System.Int32)">
+            <summary>
+            If parameters are invalid then error is displayed
+            </summary>
+            <param name="parameter"></param>
+            <param name="data"></param>
+            <param name="n"></param>
+            <param name="newDrawing"></param>
+            <param name="x"></param>
+        </member>
+        <member name="M:Component2.commandCheck.Parameterscheck(System.Exception,Component2.Drawing,System.Int32,System.Int32)">
+            <summary>
+            Method to check number of parameters entered and display error if not
+            </summary>
+            <param name="e"></param>
+            <param name="newDrawing"></param>
+            <param name="count"></param>
+            <param name="x"></param>
+        </member>
+        <member name="T:Component2.commandParser">
+            <summary>
+            To parse Commands according to data entered user enter
+            </summary>
+        </member>
+        <member name="M:Component2.commandParser.parseMethod(System.Collections.Generic.List{System.String},Component2.Drawing,System.Int32,System.Int32)">
+            <summary>
+            Method to parse methods provided by user
+            </summary>
+            <param name="data"></param>
+            <param name="newDrawing"></param>
+            <param name="n"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:Component2.commandParser.loop(System.Collections.Generic.List{System.String},Component2.Drawing,System.Int32,System.Int32)">
+            <summary>
+            method created for "for" loop
+            </summary>
+            <param name="data">user input data for 'if' condition</param>
+            <param name="newCanvass">displaying screen in which user given instructions is implemented</param>
+            <param name="n">line where the program is currently running</param>
+            <param name="z"></param>
+        </member>
+        <member name="M:Component2.commandParser.CommandLine(System.String,Component2.Drawing)">
+            <summary>
+            Read the single Lne Command
+            </summary>
+            <param name="command"></param>
+            <param name="newDrawing"></param>
+        </member>
+        <member name="M:Component2.commandParser.multiplecommands(System.String,Component2.Drawing)">
+            <summary>
+            Parse multiple Lines
+            </summary>
+            <param name="command"></param>
+            <param name="newDrawing"></param>
+        </member>
+        <member name="M:Component2.commandParser.Commands(System.String,System.String,Component2.Drawing)">
+            <summary>
+            To read multiple line and single line commands
+            </summary>
+            <param name="command"></param>
+            <param name="multiline"></param>
+            <param name="NewDrawing"></param>
+        </member>
+        <member name="M:Component2.commandParser.CommandsEntered(System.String[],Component2.Drawing,System.Int32)">
+            <summary>
+            To Check the user entered commands
+            </summary>
+            <param name="split"></param>
+            <param name="newDrawing"></param>
+            <param name="x"></param>
+        </member>
+        <member name="T:Component2.DrawCircle">
+            <summary>
+            Class created to draw circle and regulate shapes
+            </summary>
+        </member>
+        <member name="M:Component2.DrawCircle.#ctor(System.Int32)">
+            <summary>
+            Set the radius using constructor
+            </summary>
+            <param name="r"></param>
+        </member>
+        <member name="M:Component2.DrawCircle.draw(Component2.Drawing)">
+            <summary>
+            Draws a circle on Drawing surface
+            </summary>
+            <param name="newDrawing"></param>
+        </member>
+        <member name="T:Component2.Drawing">
+            <summary>
+            Drawing class to help data displayed in the form
+            </summary>
+        </member>
+        <member name="F:Component2.Drawing.g">
+            <summary>
+            Pen position instance
+            Graphical context instance
+            Brush Context instance
+            Pen Context instance
+            </summary>
+        </member>
+        <member name="M:Component2.Drawing.#ctor(System.Drawing.Graphics)">
+            <summary>
+            Initializing using constructors
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:Component2.Drawing.moveTo(System.Int32,System.Int32)">
+            <summary>
+            Set pen coordinates to move to a particular spot
+            </summary>
+            <param name="xpoint"></param>
+            <param name="ypoint"></param>
+        </member>
+        <member name="M:Component2.Drawing.set_penColor(System.Drawing.Color)">
+            <summary>
+            Method to fill pen color
+            </summary>
+            <param name="fill"></param>
+        </member>
+        <member name="M:Component2.Drawing.drawTo(System.Int32,System.Int32)">
+            <summary>
+            Draw to command used to drawline from-to user given points
+            </summary>
+            <param name="xposition"></param>
+            <param name="yposition"></param>
+        </member>
+        <member name="M:Component2.Drawing.reset">
+            <summary>
+            method created to reset the values
+            </summary>
+        </member>
+        <member name="M:Component2.Drawing.clear">
+            <summary>
+            Clears the picture box
+            </summary>
+        </member>
+        <member name="T:Component2.DrawPolygon">
+            <summary>
+            Class to drawpolygon 
+            </summary>
+        </member>
+        <member name="M:Component2.DrawPolygon.draw(Component2.Drawing)">
+            <summary>
+            Draw polygon according to user defined coordinates
+            </summary>
+            <param name="newDrawing"></param>
+        </member>
+        <member name="T:Component2.DrawRectangle">
+            <summary>
+            Class create to draw rectangle and square
+            </summary>
+        </member>
+        <member name="M:Component2.DrawRectangle.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Default constructor for setting height and width
+            </summary>
+            <param name="w"></param>
+            <param name="h"></param>
+        </member>
+        <member name="M:Component2.DrawRectangle.draw(Component2.Drawing)">
+            <summary>
+            Draw a rectangle or square according to user input
+            </summary>
+            <param name="newDrawing"></param>
+        </member>
+        <member name="T:Component2.DrawTriangle">
+            <summary>
+            Class to create a triangle
+            </summary>
+        </member>
+        <member name="T:Component2.Form1">
+            <summary>
+            Class to perform diffferent things by user
+            </summary>
+        </member>
+        <member name="M:Component2.Form1.textBox1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            To run commands in richtextbox after entering run command in textbox and hit enter
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component2.Form1.pictureBox1_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            To let commands to create an drawing over bitmap
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component2.Form1.loadToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Load menu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component2.Form1.saveToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Save menu method
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component2.Form1.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            To exit the application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Component2.Form1.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            To run the code
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Component2.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Component2.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Component2.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Component2.methods">
+            <summary>
+            Class created to store methods provided by users
+            </summary>
+        </member>
+        <member name="M:Component2.methods.storeMethod(System.String,System.String)">
+            <summary>
+            To store method and their purpose
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Component2.methods.getMethod(System.String)">
+            <summary>
+            Get the methods stored
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component2.methods.existingMethod(System.String)">
+            <summary>
+            Method to check existing method in the dictionary
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component2.methods.reset">
+            <summary>
+            Resets the method dictionary
+            </summary>
+        </member>
+        <member name="T:Component2.Program">
+            <summary>
+            Driver class
+            </summary>
+        </member>
+        <member name="M:Component2.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Component2.Shape">
+            <summary>
+            Class Created to help in drawing different shapes
+            </summary>
+        </member>
+        <member name="M:Component2.Shape.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Deault constructor to get values of width and height
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="T:Component2.Variable">
+            <summary>
+            Variable class is used to get instruction given by users
+            </summary>
+        </member>
+        <member name="M:Component2.Variable.storeData(System.String,System.Int32)">
+            <summary>
+            Store variables provided by user and their values
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Component2.Variable.pullData(System.String)">
+            <summary>
+            To get the user enterd data
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component2.Variable.exisitingVariable(System.String)">
+            <summary>
+            To check whether the variable exists or not
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Component2.Variable.UpdateVariable(System.String,System.Int32)">
+            <summary>
+            TO update the variable
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Component2.Variable.reset">
+            <summary>
+            To clear the variable dictionary
+            </summary>
+        </member>
+        <member name="T:Component2.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Component2.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Component2.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
